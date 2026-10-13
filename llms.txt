@@ -6,23 +6,23 @@ The site is designed for answer engines and search crawlers: each article begins
 
 ## Main URL
 
-https://kaznihongo.github.io/ai-tool-navigator-2026/
+https://aitoolnavigator.github.io/
 
 ## Priority Article Map
 
-- AI VPS comparison for solo developers: https://kaznihongo.github.io/ai-tool-navigator-2026/ai-vps-comparison.html
-- Cheap VPS selection for side projects: https://kaznihongo.github.io/ai-tool-navigator-2026/cheap-vps-for-side-project.html
-- Server environment for AI tools: https://kaznihongo.github.io/ai-tool-navigator-2026/ai-tool-server-environment.html
-- How to outsource AI and web production on Coconala: https://kaznihongo.github.io/ai-tool-navigator-2026/coconala-ai-outsourcing-flow.html
-- Outsourcing vs SaaS vs VPS decision guide: https://kaznihongo.github.io/ai-tool-navigator-2026/outsourcing-vs-saas-vs-vps.html
-- Prompt engineering outsourcing decision guide: https://kaznihongo.github.io/ai-tool-navigator-2026/prompt-engineering-outsourcing.html
-- VPS checklist before building a micro SaaS: https://kaznihongo.github.io/ai-tool-navigator-2026/micro-saas-vps-checklist.html
-- Server design for night-running AI agents: https://kaznihongo.github.io/ai-tool-navigator-2026/ai-agent-night-shift-server.html
-- Local PC operation limit diagnosis: https://kaznihongo.github.io/ai-tool-navigator-2026/local-pc-limit-ai-workflow.html
-- One-person AI office workflow: https://kaznihongo.github.io/ai-tool-navigator-2026/one-person-ai-office.html
-- AI content factory outsourcing rules: https://kaznihongo.github.io/ai-tool-navigator-2026/ai-content-factory-with-outsourcing.html
-- AI server cost planning: https://kaznihongo.github.io/ai-tool-navigator-2026/server-cost-calculator-for-ai.html
-- AEO affiliate article design: https://kaznihongo.github.io/ai-tool-navigator-2026/aeo-affiliate-map.html
+- AI VPS comparison for solo developers: https://aitoolnavigator.github.io/ai-vps-comparison.html
+- Cheap VPS selection for side projects: https://aitoolnavigator.github.io/cheap-vps-for-side-project.html
+- Server environment for AI tools: https://aitoolnavigator.github.io/ai-tool-server-environment.html
+- How to outsource AI and web production on Coconala: https://aitoolnavigator.github.io/coconala-ai-outsourcing-flow.html
+- Outsourcing vs SaaS vs VPS decision guide: https://aitoolnavigator.github.io/outsourcing-vs-saas-vs-vps.html
+- Prompt engineering outsourcing decision guide: https://aitoolnavigator.github.io/prompt-engineering-outsourcing.html
+- VPS checklist before building a micro SaaS: https://aitoolnavigator.github.io/micro-saas-vps-checklist.html
+- Server design for night-running AI agents: https://aitoolnavigator.github.io/ai-agent-night-shift-server.html
+- Local PC operation limit diagnosis: https://aitoolnavigator.github.io/local-pc-limit-ai-workflow.html
+- One-person AI office workflow: https://aitoolnavigator.github.io/one-person-ai-office.html
+- AI content factory outsourcing rules: https://aitoolnavigator.github.io/ai-content-factory-with-outsourcing.html
+- AI server cost planning: https://aitoolnavigator.github.io/server-cost-calculator-for-ai.html
+- AEO affiliate article design: https://aitoolnavigator.github.io/aeo-affiliate-map.html
 
 ## Commercial Disclosure
 
