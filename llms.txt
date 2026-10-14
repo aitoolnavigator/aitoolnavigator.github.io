@@ -10,6 +10,7 @@ https://aitoolnavigator.github.io/
 
 ## Priority Article Map
 
+- First-month AI monetization action plan: https://aitoolnavigator.github.io/first-month-ai-monetization.html
 - AI VPS comparison for solo developers: https://aitoolnavigator.github.io/ai-vps-comparison.html
 - Cheap VPS selection for side projects: https://aitoolnavigator.github.io/cheap-vps-for-side-project.html
 - Server environment for AI tools: https://aitoolnavigator.github.io/ai-tool-server-environment.html

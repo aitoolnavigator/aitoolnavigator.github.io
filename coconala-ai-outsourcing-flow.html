@@ -12,7 +12,7 @@
 :root{--ink:#13201a;--muted:#5d6c63;--line:#d9e4dc;--paper:#f6f8f3;--panel:#fff;--accent:#116b5c;--blue:#315c99;font-family:Inter,"Noto Sans JP",system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.8}a{color:inherit}.topbar{position:sticky;top:0;background:rgba(246,248,243,.95);border-bottom:1px solid var(--line);padding:14px clamp(18px,5vw,60px);display:flex;justify-content:space-between;gap:16px}.brand{font-weight:800;text-decoration:none}.wrap{max-width:980px;margin:auto;padding:clamp(28px,6vw,72px) 18px}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase}h1{font-size:clamp(34px,6vw,64px);line-height:1.08;margin:.2em 0}h2{font-size:clamp(24px,4vw,36px);line-height:1.2;margin:2em 0 .4em}.lead,.answer{font-size:18px;color:var(--muted)}.answer,.box,.faq details{border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;padding:10px 16px}.cta.secondary{background:var(--blue)}.toc{display:grid;gap:8px;margin:28px 0}.toc a{color:var(--blue);font-weight:800}.faq{display:grid;gap:12px}.faq summary{font-weight:800;cursor:pointer}.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.related a{display:block;border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px;text-decoration:none;font-weight:800}.template{white-space:pre-wrap;border:1px solid var(--line);border-radius:8px;background:#fff;padding:18px;font-family:ui-monospace,Consolas,monospace;font-size:14px;line-height:1.7}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fff}.compare{width:100%;min-width:760px;border-collapse:collapse}.compare th,.compare td{padding:14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.compare th{color:#0b3f39;font-size:13px}.warning{border-left:5px solid #b35c00;background:#fff8ed}@media(max-width:720px){.topbar{display:block}.related{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ココナラでAI・Web制作を外注する流れ: 失敗しない依頼文テンプレ","description":"AIツール導入、LP制作、Bot開発、業務自動化をココナラで外注するときの依頼文テンプレート、相場感、失敗回避をまとめます。","inLanguage":"ja","author":{"@type":"Organization","name":"AI Tool Navigator 2026"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI開発はココナラで外注できますか？","acceptedAnswer":{"@type":"Answer","text":"案件内容によりますが、チャットボット、プロンプト作成、簡単な自動化、Web制作の相談先を探せます。"}},{"@type":"Question","name":"依頼文に何を書くべきですか？","acceptedAnswer":{"@type":"Answer","text":"目的、完成物、参考URL、予算、納期、修正条件、納品形式を書くとやり取りがスムーズです。"}},{"@type":"Question","name":"アフィリエイト導線はどこに置くべきですか？","acceptedAnswer":{"@type":"Answer","text":"依頼文テンプレートの直後に「相談先を探す」リンクとして置くと自然です。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI開発はココナラで外注できますか？","acceptedAnswer":{"@type":"Answer","text":"案件内容によりますが、チャットボット、プロンプト作成、簡単な自動化、Web制作の相談先を探せます。"}},{"@type":"Question","name":"依頼文に何を書くべきですか？","acceptedAnswer":{"@type":"Answer","text":"目的、完成物、参考URL、予算、納期、修正条件、納品形式を書くとやり取りがスムーズです。"}},{"@type":"Question","name":"このページを読んだ後は何をすべきですか？","acceptedAnswer":{"@type":"Answer","text":"依頼文を整えたら、近い実績のある相談先を探し、小さな範囲で見積もりを取るのが現実的です。"}}]}</script>
 </head>
 <body>
 <header class="topbar"><a class="brand" href="./">AI Tool Navigator</a><nav><a href="./#articles">記事一覧</a> / <a href="./#policy">方針</a></nav></header>
@@ -49,8 +49,8 @@ AIツール比較サイトで使う、問い合わせ分類または記事制作
 <section id="s3"><h2>見積もり前チェック</h2><ul><li>「AIを使いたい」ではなく「何を入力して、何が出れば成功か」を書く</li><li>成果物の所有権、納品形式、修正回数を先に聞く</li><li>ログインIDやパスワードを直接渡さず、テスト用データで進める</li><li>いきなり大きな開発にせず、まず診断・設計・小さな試作で依頼する</li></ul></section>
 <section id="s4" class="box warning"><h2>失敗しやすい依頼</h2><p>「ChatGPTで稼げるツールを作ってください」「いい感じのAIサイトを作ってください」のような依頼は、見積もりがぶれます。先に、入力、出力、利用者、納品後の更新方法を決める方が成功率は上がります。</p></section>
 <section class="box">
-<h2>この記事から作れる導線</h2>
-<p>読者が「何を選べばいいか」まで来た段階で、比較候補として成果リンクを提示します。答えを急がせず、判断材料を出したあとにリンクを置くことで、広告だけの薄いページになりにくくなります。</p>
+<h2>次にできること</h2>
+<p>ここまで読んで「自分の状況に近い」と感じたら、次は候補を実際に見てみてください。申し込み前に条件を確認し、合わない場合は無理に契約しない前提で比較します。</p>
 <div class="cta-row"><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEFL2+2HWKZE+2PEO+1HONMA" rel="nofollow sponsored">TVCMで話題のココナラ</a><img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4BEFL2+2HWKZE+2PEO+1HONMA" alt=""></div>
 </section>
 <section>
@@ -58,7 +58,7 @@ AIツール比較サイトで使う、問い合わせ分類または記事制作
 <div class="faq">
 <details><summary>AI開発はココナラで外注できますか？</summary><p>案件内容によりますが、チャットボット、プロンプト作成、簡単な自動化、Web制作の相談先を探せます。</p></details>
 <details><summary>依頼文に何を書くべきですか？</summary><p>目的、完成物、参考URL、予算、納期、修正条件、納品形式を書くとやり取りがスムーズです。</p></details>
-<details><summary>アフィリエイト導線はどこに置くべきですか？</summary><p>依頼文テンプレートの直後に「相談先を探す」リンクとして置くと自然です。</p></details>
+<details><summary>このページを読んだ後は何をすべきですか？</summary><p>依頼文を整えたら、近い実績のある相談先を探し、小さな範囲で見積もりを取るのが現実的です。</p></details>
 </div>
 </section>
 <section>
