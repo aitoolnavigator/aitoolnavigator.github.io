@@ -59,10 +59,18 @@
     {
       "program_id": "s00000025500001",
       "name": "Archers",
+      "status": "審査中",
+      "applied_at": "2026-10-14",
+      "site": "AI Tool Navigator 2026",
+      "submission_note": "人物画像使用不可に注意。SEO + 比較・ランキング + 情報・ノウハウ記事で準備。"
+    },
+    {
+      "program_id": "s00000026161001",
+      "name": "エンスポーツ",
       "status": "申請フォーム準備済み",
       "prepared_at": "2026-10-14",
       "site": "AI Tool Navigator 2026",
-      "submission_note": "人物画像使用不可に注意。SEO + 比較・ランキング + 情報・ノウハウ記事で準備。"
+      "submission_note": "アプリ内会員顔写真使用不可、商標リスティングNGに注意。SEO + 比較・ランキング + 情報・ノウハウ記事で準備。"
     }
   ],
   "recommended_apply_first": [
