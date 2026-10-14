@@ -1,0 +1,66 @@
+{
+  "updated": "2026-10-14",
+  "note": "Approved affiliate URLs should be inserted only after the program is approved. Do not invent URLs or claims.",
+  "slots": [
+    {
+      "id": "dating-paid-plan-primary",
+      "theme": "serious-dating",
+      "page": "serious-dating-lab/paid-plan.html",
+      "best_offer_type": "matching app or marriage app official signup",
+      "placement": "after paid-plan checklist table",
+      "cta_text": "公式で料金と本人確認を見る",
+      "approved_url": null,
+      "tracking_pixel": null
+    },
+    {
+      "id": "dating-comparison-secondary",
+      "theme": "serious-dating",
+      "page": "serious-dating-lab/comparison.html",
+      "best_offer_type": "purpose-specific matching app comparison",
+      "placement": "after comparison table",
+      "cta_text": "目的に近い公式サービスを確認する",
+      "approved_url": null,
+      "tracking_pixel": null
+    },
+    {
+      "id": "aga-online-primary",
+      "theme": "aga-hair-start",
+      "page": "aga-hair-start/online-consultation.html",
+      "best_offer_type": "AGA online clinic consultation",
+      "placement": "after online consultation checklist",
+      "cta_text": "公式で診察の流れと費用を見る",
+      "approved_url": null,
+      "tracking_pixel": null
+    },
+    {
+      "id": "aga-cost-secondary",
+      "theme": "aga-hair-start",
+      "page": "aga-hair-start/cost.html",
+      "best_offer_type": "AGA clinic pricing page or consultation booking",
+      "placement": "after cost table",
+      "cta_text": "公式で費用の内訳を確認する",
+      "approved_url": null,
+      "tracking_pixel": null
+    },
+    {
+      "id": "cleanlook-hair-removal-primary",
+      "theme": "mens-cleanlook",
+      "page": "mens-cleanlook-lab/hair-removal.html",
+      "best_offer_type": "men's hair removal clinic or salon consultation",
+      "placement": "after hair-removal checklist",
+      "cta_text": "公式で料金と通い方を見る",
+      "approved_url": null,
+      "tracking_pixel": null
+    },
+    {
+      "id": "cleanlook-deodorant-secondary",
+      "theme": "mens-cleanlook",
+      "page": "mens-cleanlook-lab/deodorant.html",
+      "best_offer_type": "deodorant, oral care, laundry, or grooming product",
+      "placement": "after odor source table",
+      "cta_text": "悩みに合うケア商品を確認する",
+      "approved_url": null,
+      "tracking_pixel": null
+    }
+  ]
+}
