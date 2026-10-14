@@ -2,6 +2,22 @@
   "updated": "2026-10-14",
   "source": "A8.net program search while logged in",
   "application_note": "Apply only to programs that match the current editorial policy. Avoid adult, sugar-dating, infidelity, or overly aggressive medical claims.",
+  "application_status": [
+    {
+      "program_id": "s00000025176001",
+      "name": "レバクリ AGA",
+      "status": "審査中",
+      "applied_at": "2026-10-14",
+      "site": "AI Tool Navigator 2026"
+    },
+    {
+      "program_id": "s00000021692001",
+      "name": "Dr.AGAクリニック",
+      "status": "申請フォーム準備済み",
+      "prepared_at": "2026-10-14",
+      "site": "AI Tool Navigator 2026"
+    }
+  ],
   "recommended_apply_first": [
     {
       "program_id": "s00000002032001",
