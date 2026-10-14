@@ -26,6 +26,8 @@
         anchor.addEventListener("click", () => track(slotId, anchor.textContent.trim()));
 
         if (!slot.approved_url) return;
+        const programId = anchor.getAttribute("data-affiliate-program");
+        if (programId && programId !== slot.approved_program_id) return;
         anchor.href = slot.approved_url;
         anchor.textContent = slot.cta_text || anchor.textContent;
         anchor.rel = "nofollow sponsored noopener";
