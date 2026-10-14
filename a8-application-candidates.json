@@ -43,10 +43,18 @@
     {
       "program_id": "s00000022221001",
       "name": "レジーナクリニックオム",
-      "status": "申請フォーム準備済み",
-      "prepared_at": "2026-10-14",
+      "status": "審査中",
+      "applied_at": "2026-10-14",
       "site": "AI Tool Navigator 2026",
       "submission_note": "割引系・商標SEO注意のため、SEO + 情報・ノウハウ記事で準備。"
+    },
+    {
+      "program_id": "s00000002032001",
+      "name": "ブライダルネット",
+      "status": "審査中",
+      "applied_at": "2026-10-14",
+      "site": "AI Tool Navigator 2026",
+      "submission_note": "婚活サイト・婚活アプリ表記に寄せ、恋活/出会い系表現を避ける。"
     }
   ],
   "recommended_apply_first": [
