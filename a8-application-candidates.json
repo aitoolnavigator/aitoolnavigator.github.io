@@ -1,0 +1,82 @@
+{
+  "updated": "2026-10-14",
+  "source": "A8.net program search while logged in",
+  "application_note": "Apply only to programs that match the current editorial policy. Avoid adult, sugar-dating, infidelity, or overly aggressive medical claims.",
+  "recommended_apply_first": [
+    {
+      "program_id": "s00000002032001",
+      "name": "ブライダルネット",
+      "theme": "serious-dating",
+      "reason": "婚活・まじめな交際のサイト方針に合う。paid-plan and marriage-life pages can introduce it naturally.",
+      "candidate_slot_ids": ["dating-paid-plan-primary", "dating-comparison-secondary"]
+    },
+    {
+      "program_id": "s00000025500001",
+      "name": "Archers",
+      "theme": "serious-dating",
+      "reason": "紹介型・恋愛相談寄りで、まじめな出会いの文脈に合う。",
+      "candidate_slot_ids": ["dating-paid-plan-primary"]
+    },
+    {
+      "program_id": "s00000026161001",
+      "name": "エンスポーツ",
+      "theme": "serious-dating",
+      "reason": "趣味・スポーツ接点の恋活として、weekend-partner pageに合う。",
+      "candidate_slot_ids": ["dating-comparison-secondary"]
+    },
+    {
+      "program_id": "s00000025176001",
+      "name": "レバクリ AGA",
+      "theme": "aga-hair-start",
+      "reason": "オンラインAGA相談ページと直結しやすく、A8上のEPC and approval figures were strong at review time.",
+      "candidate_slot_ids": ["aga-online-primary", "aga-cost-secondary"]
+    },
+    {
+      "program_id": "s00000021692001",
+      "name": "Dr.AGAクリニック",
+      "theme": "aga-hair-start",
+      "reason": "無料カウンセリング訴求と doctor-questions / hair-confidence pagesに合う。",
+      "candidate_slot_ids": ["aga-online-primary"]
+    },
+    {
+      "program_id": "s00000025703001",
+      "name": "イースト駅前クリニック AGA",
+      "theme": "aga-hair-start",
+      "reason": "オンライン/通院の比較文脈に合う。",
+      "candidate_slot_ids": ["aga-cost-secondary"]
+    },
+    {
+      "program_id": "s00000013449001",
+      "name": "ゴリラ脱毛",
+      "theme": "mens-cleanlook",
+      "reason": "ひげ脱毛・男性向け清潔感ページと相性が良い。",
+      "candidate_slot_ids": ["cleanlook-hair-removal-primary"]
+    },
+    {
+      "program_id": "s00000014289002",
+      "name": "メンズリゼ",
+      "theme": "mens-cleanlook",
+      "reason": "男性脱毛・ひげ脱毛の比較候補として自然。",
+      "candidate_slot_ids": ["cleanlook-hair-removal-primary"]
+    },
+    {
+      "program_id": "s00000022221001",
+      "name": "レジーナクリニックオム",
+      "theme": "mens-cleanlook",
+      "reason": "メンズ脱毛の料金・通いやすさ比較に合う。",
+      "candidate_slot_ids": ["cleanlook-hair-removal-primary"]
+    }
+  ],
+  "hold_or_review_later": [
+    {
+      "program_id": "s00000009685003",
+      "name": "イククル",
+      "reason": "出会い系色が強く、current site policy is serious dating only."
+    },
+    {
+      "program_id": "s00000023431001",
+      "name": "paters",
+      "reason": "site policy avoids adult/sugar/ambiguous dating positioning."
+    }
+  ]
+}

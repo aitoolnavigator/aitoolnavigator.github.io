@@ -9,6 +9,7 @@
       "best_offer_type": "matching app or marriage app official signup",
       "placement": "after paid-plan checklist table",
       "cta_text": "公式で料金と本人確認を見る",
+      "candidate_program_ids": ["s00000002032001", "s00000025500001"],
       "approved_url": null,
       "tracking_pixel": null
     },
@@ -19,6 +20,7 @@
       "best_offer_type": "purpose-specific matching app comparison",
       "placement": "after comparison table",
       "cta_text": "目的に近い公式サービスを確認する",
+      "candidate_program_ids": ["s00000002032001", "s00000026161001"],
       "approved_url": null,
       "tracking_pixel": null
     },
@@ -29,6 +31,7 @@
       "best_offer_type": "AGA online clinic consultation",
       "placement": "after online consultation checklist",
       "cta_text": "公式で診察の流れと費用を見る",
+      "candidate_program_ids": ["s00000025176001", "s00000021692001"],
       "approved_url": null,
       "tracking_pixel": null
     },
@@ -39,6 +42,7 @@
       "best_offer_type": "AGA clinic pricing page or consultation booking",
       "placement": "after cost table",
       "cta_text": "公式で費用の内訳を確認する",
+      "candidate_program_ids": ["s00000025176001", "s00000025703001"],
       "approved_url": null,
       "tracking_pixel": null
     },
@@ -49,6 +53,7 @@
       "best_offer_type": "men's hair removal clinic or salon consultation",
       "placement": "after hair-removal checklist",
       "cta_text": "公式で料金と通い方を見る",
+      "candidate_program_ids": ["s00000013449001", "s00000014289002", "s00000022221001"],
       "approved_url": null,
       "tracking_pixel": null
     },
@@ -59,6 +64,7 @@
       "best_offer_type": "deodorant, oral care, laundry, or grooming product",
       "placement": "after odor source table",
       "cta_text": "悩みに合うケア商品を確認する",
+      "candidate_program_ids": [],
       "approved_url": null,
       "tracking_pixel": null
     }
