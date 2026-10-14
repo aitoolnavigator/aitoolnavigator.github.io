@@ -1,9 +1,10 @@
 {
   "updated": "2026-10-14",
-  "note": "Approved affiliate URLs should be inserted only after the program is approved. Do not invent URLs or claims.",
+  "note": "After approval, set approved_url and approved_program_id to the actual approved offer, and preserve tracking_pixel. Provider-bound anchors switch only when the program ID matches. Do not invent URLs or claims.",
   "slots": [
     {
       "id": "dating-paid-plan-primary",
+      "approved_program_id": null,
       "theme": "serious-dating",
       "page": "serious-dating-lab/paid-plan.html",
       "best_offer_type": "matching app or marriage app official signup",
@@ -15,6 +16,7 @@
     },
     {
       "id": "dating-comparison-secondary",
+      "approved_program_id": null,
       "theme": "serious-dating",
       "page": "serious-dating-lab/comparison.html",
       "best_offer_type": "purpose-specific matching app comparison",
@@ -26,6 +28,7 @@
     },
     {
       "id": "aga-online-primary",
+      "approved_program_id": null,
       "theme": "aga-hair-start",
       "page": "aga-hair-start/online-consultation.html",
       "best_offer_type": "AGA online clinic consultation",
@@ -37,6 +40,7 @@
     },
     {
       "id": "aga-cost-secondary",
+      "approved_program_id": null,
       "theme": "aga-hair-start",
       "page": "aga-hair-start/cost.html",
       "best_offer_type": "AGA clinic pricing page or consultation booking",
@@ -48,6 +52,7 @@
     },
     {
       "id": "cleanlook-hair-removal-primary",
+      "approved_program_id": null,
       "theme": "mens-cleanlook",
       "page": "mens-cleanlook-lab/hair-removal.html",
       "best_offer_type": "men's hair removal clinic or salon consultation",
@@ -59,6 +64,7 @@
     },
     {
       "id": "cleanlook-deodorant-secondary",
+      "approved_program_id": null,
       "theme": "mens-cleanlook",
       "page": "mens-cleanlook-lab/deodorant.html",
       "best_offer_type": "deodorant, oral care, laundry, or grooming product",
