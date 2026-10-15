@@ -8,5 +8,6 @@
 @font-face{font-family:SiteJapanese;src:url('./fonts/site-japanese-v3.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 .magazine,.magazine .comic-dialogue{font-family:SiteJapanese,"Noto Sans JP",Meiryo,sans-serif}.magazine .cover-caption h2{font-weight:700}.magazine .article .comic-dialogue{font-weight:450}
 .magazine .story-image{aspect-ratio:30/17}.magazine .story-image img{height:235.29412%!important;top:-135.29412%}.magazine .side-story .story-image,.magazine .row-image{aspect-ratio:1}.magazine .side-story .story-image img,.magazine .row-image img{width:352.94118%!important;height:235.29412%!important;top:-135.29412%;left:-50%}
+.magazine .cover-caption{padding:0 0 14px}.magazine .cover-caption h2{margin-bottom:0}.magazine .cover-deck{margin:15px 0 10px}.title-phrase{display:inline-block}.magazine [id^="service-"]{scroll-margin-top:24px}.magazine table a{font-weight:600;text-decoration-thickness:1px}
 @media(prefers-reduced-motion:reduce){.story-image img,.row-image img{transition:none}}
 @media print{.magazine .top nav,.article-rail,.mobile-outline{display:none}.magazine .reading-layout{display:block}.magazine .next-step{background:#fff}.magazine .story-turn{border-color:#555}}
