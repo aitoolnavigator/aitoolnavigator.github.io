@@ -1,30 +1,30 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-16",
   "note": "After approval, set approved_url and approved_program_id to the actual approved offer, and preserve tracking_pixel. Provider-bound anchors switch only when the program ID matches. Do not invent URLs or claims.",
   "slots": [
     {
       "id": "dating-paid-plan-primary",
-      "approved_program_id": null,
+      "approved_program_id": "s00000002032001",
       "theme": "serious-dating",
       "page": "serious-dating-lab/paid-plan.html",
       "best_offer_type": "matching app or marriage app official signup",
       "placement": "after paid-plan checklist table",
-      "cta_text": "公式で料金と本人確認を見る",
+      "cta_text": "ブライダルネットの公式サイトへ",
       "candidate_program_ids": ["s00000002032001", "s00000025500001"],
-      "approved_url": null,
-      "tracking_pixel": null
+      "approved_url": "https://px.a8.net/svt/ejp?a8mat=4BEH55+D7PHR6+FOG+62MDE",
+      "tracking_pixel": "https://www16.a8.net/0.gif?a8mat=4BEH55+D7PHR6+FOG+62MDE"
     },
     {
       "id": "dating-comparison-secondary",
-      "approved_program_id": null,
+      "approved_program_id": "s00000002032001",
       "theme": "serious-dating",
       "page": "serious-dating-lab/comparison.html",
       "best_offer_type": "purpose-specific matching app comparison",
       "placement": "after comparison table",
-      "cta_text": "目的に近い公式サービスを確認する",
+      "cta_text": "ブライダルネットの公式サイトへ",
       "candidate_program_ids": ["s00000002032001", "s00000026161001"],
-      "approved_url": null,
-      "tracking_pixel": null
+      "approved_url": "https://px.a8.net/svt/ejp?a8mat=4BEH55+D7PHR6+FOG+62MDE",
+      "tracking_pixel": "https://www16.a8.net/0.gif?a8mat=4BEH55+D7PHR6+FOG+62MDE"
     },
     {
       "id": "aga-online-primary",
