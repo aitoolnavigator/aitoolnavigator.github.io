@@ -2,15 +2,21 @@
   const slotAnchors = document.querySelectorAll("[data-affiliate-slot]");
   if (!slotAnchors.length) return;
 
-  const track = (slotId, label) => {
+  const approvedAnchors = new WeakSet();
+  const track = (anchor) => {
     if (typeof window.gtag === "function") {
-      window.gtag("event", "affiliate_click", {
-        event_category: "affiliate",
-        event_label: label || slotId,
-        slot_id: slotId
+      window.gtag("event", approvedAnchors.has(anchor) ? "affiliate_click" : "official_link_click", {
+        slot_id: anchor.getAttribute("data-affiliate-slot"),
+        program_id: anchor.getAttribute("data-affiliate-program") || "",
+        page_path: window.location.pathname
       });
     }
   };
+
+  // Keep click listeners working even when the slot configuration cannot load.
+  slotAnchors.forEach((anchor) => {
+    anchor.addEventListener("click", () => track(anchor));
+  });
 
   fetch("/affiliate-slots.json", { cache: "no-store" })
     .then((response) => response.ok ? response.json() : null)
@@ -23,8 +29,6 @@
         const slot = slots.get(slotId);
         if (!slot) return;
 
-        anchor.addEventListener("click", () => track(slotId, anchor.textContent.trim()));
-
         if (!slot.approved_url) return;
         const programId = anchor.getAttribute("data-affiliate-program");
         if (programId && programId !== slot.approved_program_id) return;
@@ -32,6 +36,7 @@
         anchor.textContent = slot.cta_text || anchor.textContent;
         anchor.rel = "nofollow sponsored noopener";
         anchor.target = "_blank";
+        approvedAnchors.add(anchor);
 
         if (slot.tracking_pixel && !document.querySelector(`img[data-affiliate-pixel="${slotId}"]`)) {
           const pixel = document.createElement("img");
@@ -46,9 +51,5 @@
         }
       });
     })
-    .catch(() => {
-      slotAnchors.forEach((anchor) => {
-        anchor.addEventListener("click", () => track(anchor.getAttribute("data-affiliate-slot"), anchor.textContent.trim()));
-      });
-    });
+    .catch(() => {});
 })();
