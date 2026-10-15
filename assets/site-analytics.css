@@ -1,6 +1,6 @@
-.analytics-consent[hidden] { display: none; }
+.analytics-consent[hidden] { display: none !important; }
 .analytics-consent {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -12,6 +12,7 @@
   line-height: 1.7;
   letter-spacing: 0;
 }
+.analytics-prompt .analytics-consent { display: flex; }
 .analytics-consent strong { font-size: 15px; }
 .analytics-consent p { margin: 4px 0 0; max-width: 760px; }
 .analytics-consent a { color: #1d5a42; text-decoration: underline; margin-left: 8px; }

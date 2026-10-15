@@ -14,13 +14,9 @@
     }
   } catch (_) {}
 
-  const panel = document.createElement("section");
-  panel.className = "analytics-consent";
-  panel.setAttribute("aria-label", "アクセス解析の設定");
-  panel.innerHTML = '<div><strong>アクセス解析へのご協力について</strong><p>読まれている記事や外部リンクの利用状況を、Google アナリティクスで確認します。同意しなくても、すべての記事とツールをご利用いただけます。<a href="./editorial-policy.html#analytics">詳しい取り扱い</a></p></div><div class="analytics-actions"><button type="button" data-choice="rejected">同意しない</button><button type="button" data-choice="accepted">同意する</button></div>';
-  const disclosure = document.querySelector(".disclosure");
-  if (disclosure) disclosure.after(panel);
-  else document.body.prepend(panel);
+  const panel = document.querySelector(".analytics-consent");
+  if (!panel) return;
+  if (choice === null) document.documentElement.classList.add("analytics-prompt");
   panel.hidden = choice !== null;
 
   const settings = document.createElement("button");
@@ -29,6 +25,7 @@
   settings.textContent = "アクセス解析の設定";
   (document.querySelector("footer") || document.body).appendChild(settings);
   settings.addEventListener("click", () => {
+    document.documentElement.classList.add("analytics-prompt");
     panel.hidden = false;
     panel.scrollIntoView({ block: "center" });
     panel.querySelector("button").focus({ preventScroll: true });
