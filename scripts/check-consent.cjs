@@ -11,6 +11,7 @@ for (const site of ['serious-dating-lab','aga-hair-start','mens-cleanlook-lab'])
     assert.equal(matches.length,1);
     assert.ok(matches[0].index < html.indexOf('</head>'));
     assert.equal(html.split('<section class="analytics-consent"').length,2);
+    assert.ok(html.includes('src="../assets/site-analytics.js?v=2"'));
     for (const [value, prompt] of [[null,true],['broken',true],[JSON.stringify({value:'accepted',time:Date.now()}),false],[JSON.stringify({value:'rejected',time:Date.now()}),false],[JSON.stringify({value:'accepted',time:1}),true],[JSON.stringify({value:'accepted',time:Date.now()+60000}),true],['blocked',true]]) {
       const classes = [];
       vm.runInNewContext(matches[0][1], {

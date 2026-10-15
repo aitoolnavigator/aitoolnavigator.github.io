@@ -17,3 +17,5 @@ The check validates the original cascade order against the pre-bundle baseline c
 PageSpeed lab results fluctuate and are not proof of search rankings, actual-user Core Web Vitals, conversions, or revenue. Compare results on the same URL and device class and retain the report links.
 
 Consent markup is pre-rendered from `assets/analytics-consent.html` and its visibility is decided by a small first-paint script in each HTML head. This prevents an asynchronous banner from pushing the article down. Analytics still requires explicit opt-in. When initially adding the markup to a new page, run `node scripts/wire-consent.cjs`; review markup changes separately because the wiring script intentionally does not overwrite existing panels.
+
+The pre-rendered panel requires the `site-analytics.js?v=2` runtime. Keep its versioned reference when adding pages; cached pre-v2 JavaScript creates its own panel and is incompatible with the new markup.
