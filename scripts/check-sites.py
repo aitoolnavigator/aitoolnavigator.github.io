@@ -47,8 +47,14 @@ for file, page in pages.items():
     expected = '\n'.join(f'/* Source: {name} */\n' + (root / 'assets' / name).read_text(encoding='utf-8') for name in sources)
     if css != expected or hashlib.sha256(css.encode()).hexdigest()[:10] not in bundle.name:
         errors.append(f'{relative}: stale bundle; run node scripts/build-styles.cjs')
-    original = subprocess.run(['git', 'show', f'7088576:{relative}'], cwd=root, capture_output=True, check=True).stdout.decode('utf-8')
-    original_styles = Page(original).styles
+    baseline = subprocess.run(['git', 'show', f'7088576:{relative}'], cwd=root, capture_output=True)
+    if baseline.returncode == 0:
+        original_styles = Page(baseline.stdout.decode('utf-8')).styles
+    elif relative == 'serious-dating-lab/profile-builder.html':
+        original_styles = ['../assets/' + name for name in ('decision-articles.css', 'illustration-system.css', 'editorial-comics.css', 'magazine-v3.css', 'site-analytics.css')]
+    else:
+        errors.append(f'{relative}: new page requires a reviewed cascade baseline')
+        continue
     if ['../assets/' + name for name in sources] != original_styles:
         errors.append(f'{relative}: stylesheet cascade changed')
     for href in page.links:

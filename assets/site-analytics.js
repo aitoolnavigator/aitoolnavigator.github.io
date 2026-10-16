@@ -46,13 +46,15 @@
     queue("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
     const campaign = {};
     const query = new URLSearchParams(location.search);
-    if (query.get("utm_source") === "social" && query.get("utm_medium") === "organic" &&
+    const sources = { social: "organic", github: "referral" };
+    const source = query.get("utm_source");
+    if (Object.hasOwn(sources, source) && query.get("utm_medium") === sources[source] &&
         query.get("utm_campaign") === "first_decision") {
-      campaign.campaign_source = "social";
-      campaign.campaign_medium = "organic";
+      campaign.campaign_source = source;
+      campaign.campaign_medium = sources[source];
       campaign.campaign_name = "first_decision";
       const content = query.get("utm_content");
-      if (["dating_trial", "aga_questions", "beard_area"].includes(content)) campaign.campaign_content = content;
+      if (["dating_trial", "aga_questions", "beard_area", "profile_builder"].includes(content)) campaign.campaign_content = content;
     }
     queue("config", measurementId, {
       send_page_view: true,

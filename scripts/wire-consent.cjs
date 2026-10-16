@@ -9,7 +9,7 @@ for (const site of ['serious-dating-lab','aga-hair-start','mens-cleanlook-lab'])
   for (const name of fs.readdirSync(path.join(root,site)).filter(n=>n.endsWith('.html'))) {
     const file = path.join(root,site,name);
     let html = fs.readFileSync(file,'utf8');
-    html = html.replace('src="../assets/site-analytics.js"', 'src="../assets/site-analytics.js?v=2"');
+    html = html.replace(/src="\.\.\/assets\/site-analytics\.js(?:\?v=\d+)?"/, 'src="../assets/site-analytics.js?v=3"');
     if (!html.includes('data-consent-visibility')) html = html.replace('</head>',early+'</head>');
     if (!html.includes('<section class="analytics-consent"')) {
       const disclosure = /<p class="disclosure">[\s\S]*?<\/p>/g;
