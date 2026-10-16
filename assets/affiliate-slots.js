@@ -15,6 +15,8 @@
 
   // Keep click listeners working even when the slot configuration cannot load.
   slotAnchors.forEach((anchor) => {
+    if (anchor.getAttribute("data-affiliate-approved") === anchor.getAttribute("data-affiliate-program") &&
+        /^https:\/\/px\.a8\.net\/svt\/ejp\?/.test(anchor.href)) approvedAnchors.add(anchor);
     anchor.addEventListener("click", () => track(anchor));
   });
 
