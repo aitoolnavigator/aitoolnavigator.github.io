@@ -4,16 +4,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px max(20px, calc((100% - 1160px) / 2));
+  padding: 12px max(20px, calc((100% - 1160px) / 2));
   border-block: 1px solid #d5d9d7;
   background: #f3f7f5;
   color: #24382e;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
   letter-spacing: 0;
 }
 .analytics-prompt .analytics-consent { display: flex; }
-.analytics-consent strong { font-size: 15px; }
+.analytics-consent strong { font-size: 14px; }
 .analytics-consent p { margin: 4px 0 0; max-width: 760px; }
 .analytics-consent a { color: #1d5a42; text-decoration: underline; margin-left: 8px; }
 .analytics-actions { display: flex; gap: 8px; flex-shrink: 0; }

@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
           assert(!await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), `overflow ${width} ${site}/${name}`);
           const ids = await page.locator('[id]').evaluateAll(nodes => nodes.map(n => n.id));
           assert.equal(ids.length, new Set(ids).size, 'duplicate ids');
-          const links = await directory.locator('li a').all();
+          const links = await directory.locator(home ? ':scope > ul > li > a' : 'li a').all();
           assert(links.length >= 2);
           if (home) {
             assert.equal(links.length, 6);
@@ -46,13 +46,43 @@ const server = http.createServer((req, res) => {
             const comic = await page.locator('.lead-stories').boundingBox();
             assert(box.y + box.height <= comic.y, 'directory must precede feature');
             assert(box.y < 700, 'directory starts too far down');
+            const search = page.getByRole('searchbox', {name: '記事を検索', exact: true});
+            assert(await search.isVisible());
+            const term = {'serious-dating-lab': '解約', 'aga-hair-start': '副作用', 'mens-cleanlook-lab': '麻酔'}[site];
+            const target = {'serious-dating-lab': 'paid-plan.html', 'aga-hair-start': 'doctor-questions.html', 'mens-cleanlook-lab': 'hair-removal.html'}[site];
+            const transmitted = [];
+            const recordRequest = request => {
+              if (!['image', 'font', 'stylesheet'].includes(request.resourceType())) transmitted.push(request.url());
+            };
+            page.on('request', recordRequest);
+            const storage = await page.evaluate(() => JSON.stringify({...localStorage}));
+            await search.fill(term);
+            assert(await page.locator(`.search-results a[href="./${target}"]`).isVisible());
+            await search.press('Enter');
+            assert(new URL(page.url()).pathname.endsWith('/index.html'));
+            await search.fill('<script>見つからない語</script>');
+            assert.equal(await page.locator('.search-results li:visible').count(), 0);
+            assert((await page.locator('.search-status').innerText()).includes('一致する記事がありません'));
+            await page.getByRole('button', {name: '検索をクリア', exact: true}).click();
+            assert(await links[0].isVisible());
+            assert.equal(await page.locator('.search-status').innerText(), '');
+            assert.equal(await page.evaluate(() => JSON.stringify({...localStorage})), storage);
+            assert.equal(transmitted.length, 0, 'search must not transmit data: ' + JSON.stringify(transmitted));
+            page.off('request', recordRequest);
           } else {
             assert.equal(await page.locator('.reader-summary li').count() >= 2, true);
             const summary = await page.locator('.reader-summary').boundingBox();
             const box = await directory.boundingBox();
             assert(summary.y < box.y, 'summary must precede contents');
             const comic = page.locator('.comic-story');
-            if (await comic.count()) assert(box.y < (await comic.boundingBox()).y, 'contents must precede comic');
+            if (await comic.count()) {
+              assert(!await comic.isVisible(), 'comic must be optional initially');
+              await page.locator('.story-extra > summary').click();
+              assert(await comic.isVisible(), 'comic must open');
+              assert((await directory.boundingBox()).y < (await comic.boundingBox()).y, 'contents must precede comic');
+              await page.locator('.story-extra > summary').click();
+              assert(!await comic.isVisible(), 'comic must close');
+            }
             for (const link of links) {
               const href = await link.getAttribute('href');
               const target = page.locator('[id="' + href.slice(1) + '"]');
@@ -73,7 +103,18 @@ const server = http.createServer((req, res) => {
       }
       await page.close();
     }
-    console.log(`PASS: ${count} responsive page checks; visible directories, summary order, anchors, unique IDs, no horizontal overflow.`);
+    const staticPage = await browser.newPage({javaScriptEnabled: false, viewport: {width: 390, height: 900}});
+    await staticPage.route('https://**/*', route => route.abort());
+    for (const site of sites) {
+      await staticPage.goto(`${base}/${site}/`);
+      assert.equal(await staticPage.locator('.topic-directory > ul > li > a:visible').count(), 6);
+      assert(!await staticPage.locator('.reader-search').isVisible(), 'no nonfunctional search without JS');
+    }
+    await staticPage.goto(`${base}/aga-hair-start/cost.html`);
+    await staticPage.locator('.story-extra > summary').click();
+    assert(await staticPage.locator('.comic-story').isVisible(), 'comic opens without JS');
+    await staticPage.close();
+    console.log(`PASS: ${count} responsive page checks; local search, optional comics, no-JS routes, anchors, unique IDs, no horizontal overflow.`);
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
