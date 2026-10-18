@@ -21,6 +21,7 @@ def head(title, description, path, script=False):
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,follow"><title>{escape(title)} | 仕入れノート</title><meta name="description" content="{escape(description, quote=True)}">
 <link rel="canonical" href="{BASE}{path}"><link rel="stylesheet" href="./style.css?v=1"><link rel="stylesheet" href="./reading.css?v=1">
+<link rel="stylesheet" href="./pop.css?v=1"><link rel="icon" type="image/svg+xml" href="./brand.svg">
 {'<script src="./reading.js?v=1" defer></script>' if script else ''}</head><body>
 <header class="header"><a class="wordmark" href="./">仕入れノート<span>SOURCING NOTE</span></a><nav aria-label="サイト内"><a href="./guides.html">読みもの</a><a href="./index.html#candidates">商品候補</a><a href="./index.html#calculator">経費の試算</a><a href="./index.html#criteria">確認基準</a></nav><span class="preview-label">試作版</span></header>'''
 
@@ -37,7 +38,7 @@ def build_library():
     groups = ''.join(f'<section class="guide-group" id="{key}" aria-labelledby="{key}-title"><div class="section-heading"><h2 id="{key}-title">{title}</h2><span>{description}</span></div><ul>' + ''.join(row(article) for article in ARTICLES if article['category'] == key) + '</ul></section>' for key, title, description in CATEGORIES)
     return head('副収入と仕入れの読みもの', '月1万円の計画、仕入れ判断、実商品の調査記録、在庫リスク。計算例と確認項目から、無理のない進め方を考える12記事。', 'guides.html', script=True) + '''
 <main class="guide-library"><p class="breadcrumb"><a href="./">仕入れノート</a> / 読みもの</p>
-<div class="library-heading"><p class="eyebrow">副収入を考える、その前に</p><h1>副収入と仕入れの読みもの</h1><p>何個売る？ いくらで買う？ 売れなかったら？<br>気になる疑問から、ひとつずつ。</p></div>
+<div class="library-heading"><p class="eyebrow">副収入を考える、その前に</p><h1><span>副収入と仕入れの</span><span>読みもの</span></h1><p>何個売る？ いくらで買う？ 売れなかったら？<br>気になる疑問から、ひとつずつ。</p></div>
 <nav class="category-index" aria-label="読みもののカテゴリ">''' + nav + '''</nav>
 <div class="guide-search" hidden><label for="guide-query">記事を検索<input type="search" id="guide-query" placeholder="月1万円、送料、在庫など" maxlength="100" autocomplete="off" aria-controls="guide-groups"></label><p role="status" id="guide-count" aria-live="polite">12本の記事</p></div>
 <aside class="reading-start"><strong>最初に読むなら</strong><a href="./monthly-units.html">月1万円には、何個売ればいい？ →</a></aside>

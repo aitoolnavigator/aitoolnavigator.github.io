@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   if (url.endsWith('/')) url += 'index.html';
   const file = path.resolve(root, '.' + decodeURIComponent(url));
   if (!file.startsWith(root + path.sep) || !fs.existsSync(file)) { res.writeHead(404).end(); return; }
-  res.setHeader('Content-Type', {'.css':'text/css', '.js':'text/javascript', '.png':'image/png'}[path.extname(file)] || 'text/html; charset=utf-8');
+  res.setHeader('Content-Type', {'.css':'text/css', '.js':'text/javascript', '.png':'image/png', '.svg':'image/svg+xml'}[path.extname(file)] || 'text/html; charset=utf-8');
   res.end(fs.readFileSync(file));
 });
 (async () => {
@@ -23,6 +23,12 @@ const server = http.createServer((req, res) => {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(url);
+      assert.equal(await page.locator('link[rel="icon"]').getAttribute('href'), './brand.svg');
+      for (const asset of ['brand.svg', 'icons/calculator.svg', 'icons/tag.svg', 'icons/search.svg', 'icons/package.svg']) {
+        const response = await page.request.get(url + asset);
+        assert.equal(response.status(), 200);
+        assert(response.headers()['content-type'].includes('image/svg+xml'));
+      }
       assert.equal(await page.locator('h1').count(), 1);
       assert.equal(await page.locator('.candidate:visible').count(), 4);
       assert((await page.locator('meta[name=robots]').getAttribute('content')).includes('noindex'));
@@ -112,6 +118,7 @@ const server = http.createServer((req, res) => {
         if (proof && ['guides.html','monthly-units.html','thirty-eighty-study.html'].includes(name)) await page.screenshot({path:path.join(proof, `${name.replace('.html','')}-${width}.png`)});
       }
       await page.goto(url + 'guides.html');
+      assert((await page.locator('.category-index a').first().evaluate(el => getComputedStyle(el, '::before').maskImage)).includes('calculator.svg'));
       assert.equal(await page.locator('.guide-group').count(), 4);
       assert.equal(await page.locator('[data-guide-terms]:visible').count(), 12);
       await page.getByRole('searchbox', {name:'記事を検索'}).fill('仕入れ上限');
