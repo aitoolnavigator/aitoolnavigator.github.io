@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <title>仕入れノート | 価格差を、仕入れの判断に。</title>
+  <meta name="description" content="中古カメラ用品の仕入れ候補を、国内価格と海外の販売記録から確認。出品価格と成約を区別し、送料・手数料を含めて試算できます。">
+  <link rel="canonical" href="https://aitoolnavigator.github.io/sourcing-note/">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <script src="./app.js?v=1" defer></script>
+</head>
+<body>
+  <header class="header"><a class="wordmark" href="./">仕入れノート<span>SOURCING NOTE</span></a><nav aria-label="サイト内"><a href="#candidates">商品候補</a><a href="#calculator">経費の試算</a><a href="#criteria">確認基準</a></nav><span class="preview-label">試作版</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">日本の中古カメラ用品 → 海外販売</p><h1>仕入れノート</h1><p class="intro-copy">その価格差、経費を引いても残る？</p></div><p class="data-date">調査日 <time datetime="2026-10-18">2026.10.18</time><br>手動調査・リアルタイム更新ではありません</p></section>
+    <dl class="metrics"><div><dt>調べた型番</dt><dd>4<span>件</span></dd></div><div><dt>条件達成を確認</dt><dd>0<span>件</span></dd></div><div><dt>販売済み表示あり</dt><dd>3<span>件</span></dd></div><div><dt>目標条件</dt><dd class="target">仕入れ ≤ $30<br>販売 ≥ $80</dd></div></dl>
+    <p class="notice"><strong>条件を満たす商品は、まだ確認できていません。</strong> 掲載価格や販売済みの表示だけでは、同じ価格で売れることや利益は保証できません。</p>
+    <div class="workspace">
+      <section class="candidates" id="candidates" aria-labelledby="candidate-title">
+        <div class="section-heading"><h2 id="candidate-title">調査した商品候補</h2><span id="result-count" role="status" aria-live="polite">4件</span></div>
+        <div class="filters" id="filters" hidden><label class="search-label">型番・メーカーで探す<input type="search" id="query" placeholder="Nikon、ファインダーなど" maxlength="100" autocomplete="off"></label><label>表示する候補<select id="status"><option value="all">すべての候補</option><option value="sold">販売済み表示あり</option><option value="pending">成約実績が未確認</option><option value="qualified">条件達成を確認済み</option><option value="saved">保存した候補</option></select></label><label>並び順<select id="sort"><option value="default">掲載順</option><option value="cheap">国内価格が安い順</option><option value="name">型番順</option></select></label></div>
+        <p class="column-note">国内の商品価格と、海外ページに表示された本体価格。送料は含めていません。</p>
+        <div id="candidate-list">
+          <article class="candidate" data-id="nikon" data-price="1650" data-kind="sold" data-terms="Nikon ニコン DR-3 アングルファインダー">
+            <div class="candidate-top"><span class="status sold">販売済み表示あり</span><span class="verdict">目標価格の裏付けなし</span><button class="save" type="button" data-save="nikon" aria-label="Nikon DR-3を保存" aria-pressed="false" title="候補を保存" hidden>保存</button></div>
+            <h3>Nikon DR-3</h3><p class="product-type">アングルファインダー</p>
+            <dl class="prices"><div><dt>国内の商品価格</dt><dd>¥1,650</dd></div><div><dt>販売済みページの表示</dt><dd>$44.10</dd></div></dl>
+            <p class="reason">価格差はありますが、$80以上の成約を裏付けられず。状態が同等かも未確認です。</p>
+            <div class="row-actions"><details><summary>根拠と注意点</summary><div class="evidence"><a href="https://netmall.hardoff.co.jp/product/4538405/" target="_blank" rel="noopener noreferrer">国内掲載：ハードオフ ↗</a><p>Bランク。国内送料・購入直前の在庫は未確認。</p><a href="https://www.ebay.com/itm/188423937445" target="_blank" rel="noopener noreferrer">海外掲載：eBay ↗</a><p>販売済み表示を確認。ただし値下げ交渉後の受諾額、決済・返品の有無は未確認です。</p></div></details><button type="button" data-calculate="nikon" hidden>この候補で試算</button></div>
+          </article>
+          <article class="candidate" data-id="minolta" data-price="3300" data-kind="sold" data-terms="Minolta ミノルタ VN アングルファインダー">
+            <div class="candidate-top"><span class="status sold">販売済み表示あり</span><span class="verdict">状態の違いに注意</span><button class="save" type="button" data-save="minolta" aria-label="Minolta VNを保存" aria-pressed="false" title="候補を保存" hidden>保存</button></div>
+            <h3>Minolta Angle Finder VN</h3><p class="product-type">アングルファインダー・ケース付き</p>
+            <dl class="prices"><div><dt>国内の商品価格</dt><dd>¥3,300</dd></div><div><dt>販売済みページの表示</dt><dd>$55.00</dd></div></dl>
+            <p class="reason">国内はCランク、海外は出品者のMint表記。同じ状態として価格を比べられません。</p>
+            <div class="row-actions"><details><summary>根拠と注意点</summary><div class="evidence"><a href="https://netmall.hardoff.co.jp/product/568856/" target="_blank" rel="noopener noreferrer">国内掲載：ハードオフ ↗</a><p>Cランク、ケース付き。光学状態・機能の照合が必要です。</p><a href="https://www.ebay.com/itm/116697504071" target="_blank" rel="noopener noreferrer">海外掲載：eBay ↗</a><p>販売済みページに$55.00、Mint表記。正確な受諾額や現在の販売速度は未確認です。</p></div></details><button type="button" data-calculate="minolta" hidden>この候補で試算</button></div>
+          </article>
+          <article class="candidate" data-id="pentax" data-price="4400" data-kind="pending" data-terms="Pentax ペンタックス 645 Refconverter レフコンバーター ファインダー">
+            <div class="candidate-top"><span class="status pending">成約実績が未確認</span><span class="verdict">出品価格 ≠ 成約価格</span><button class="save" type="button" data-save="pentax" aria-label="Pentax 645を保存" aria-pressed="false" title="候補を保存" hidden>保存</button></div>
+            <h3>Pentax 645 Refconverter</h3><p class="product-type">レフコンバーター・説明書／ケース付き</p>
+            <dl class="prices"><div><dt>国内の商品価格</dt><dd>¥4,400</dd></div><div><dt>海外の出品価格</dt><dd>$86.51</dd></div></dl>
+            <p class="reason">$80を超える出品はありますが、成約の証拠ではありません。別出品には$57の表示もあります。</p>
+            <div class="row-actions"><details><summary>根拠と注意点</summary><div class="evidence"><a href="https://netmall.hardoff.co.jp/product/4672320/" target="_blank" rel="noopener noreferrer">国内掲載：ハードオフ ↗</a><p>Bランク。為替と国内送料によっては仕入れ$30を超えます。</p><a href="https://www.ebay.com/itm/205108058496" target="_blank" rel="noopener noreferrer">海外の出品：$86.51 ↗</a><a href="https://www.ebay.com/itm/256547907083" target="_blank" rel="noopener noreferrer">別の出品：$57.00 ↗</a><p>成約価格ではありません。検索結果にあった$99.99の終了例も、出品者による取り下げ表示であり、成約として採用していません。</p></div></details><button type="button" data-calculate="pentax" hidden>この候補で試算</button></div>
+          </article>
+          <article class="candidate" data-id="canon" data-price="2200" data-kind="sold" data-terms="Canon キヤノン キャノン Angle Finder C アングルファインダー">
+            <div class="candidate-top"><span class="status sold">販売済み表示あり</span><span class="verdict">付属品の照合が必要</span><button class="save" type="button" data-save="canon" aria-label="Canon Angle Finder Cを保存" aria-pressed="false" title="候補を保存" hidden>保存</button></div>
+            <h3>Canon Angle Finder C</h3><p class="product-type">アングルファインダー・本体のみ</p>
+            <dl class="prices"><div><dt>国内の商品価格</dt><dd>¥2,200</dd></div><div><dt>販売済みページの表示</dt><dd>$40.00</dd></div></dl>
+            <p class="reason">$80以上の成約は確認できず。対応アダプターや機能を確かめる必要があります。</p>
+            <div class="row-actions"><details><summary>根拠と注意点</summary><div class="evidence"><a href="https://netmall.hardoff.co.jp/product/3775818/" target="_blank" rel="noopener noreferrer">国内掲載：ハードオフ ↗</a><p>Bランク、本体のみ。適合や光学状態は別途確認が必要です。</p><a href="https://www.ebay.com/itm/398067829786" target="_blank" rel="noopener noreferrer">海外掲載：eBay ↗</a><p>販売済みページに$40.00。値下げ交渉後の受諾額や、返品の有無は未確認です。</p></div></details><button type="button" data-calculate="canon" hidden>この候補で試算</button></div>
+          </article>
+        </div>
+        <div class="empty" id="empty" hidden><h3>該当する候補はありません</h3><p id="empty-message"></p><button type="button" id="reset">すべての候補に戻す</button></div>
+        <p id="save-message" role="status" aria-live="polite"></p>
+      </section>
+      <aside class="calculation" id="calculator" aria-labelledby="calculator-title">
+        <div class="section-heading"><h2 id="calculator-title">経費を引いて試算</h2><span>USD / JPY</span></div>
+        <p class="calc-item" id="calc-item">商品名を選ぶか、金額を直接入力</p>
+        <p class="muted">為替・手数料・販売額は自分の条件を入力してください。表示中の価格は自動取得していません。</p>
+        <form id="calc-form">
+          <div class="field-grid">
+            <label>予定販売額（USD）<input id="sale" type="number" min="0" max="1000000" step="0.01" inputmode="decimal" placeholder="80.00" required></label>
+            <label>為替（1 USD＝円）<input id="fx" type="number" min="0.01" max="100000" step="0.01" inputmode="decimal" placeholder="自分の適用レート" required></label>
+            <label>仕入価格（円）<input id="buy" type="number" min="0" max="100000000" step="1" inputmode="numeric" placeholder="4500" required></label>
+            <label>国内送料（円）<input id="domestic" type="number" min="0" max="1000000" step="1" inputmode="numeric" placeholder="未入力" required></label>
+            <label>購入者から受け取る送料（USD）<input id="buyer-shipping" type="number" min="0" max="100000" step="0.01" inputmode="decimal" placeholder="未入力" required></label>
+            <label>海外への送料（USD）<input id="shipping" type="number" min="0" max="100000" step="0.01" inputmode="decimal" placeholder="未入力" required></label>
+            <label>手数料率（%）<input id="fee" type="number" min="0" max="99.99" step="0.01" inputmode="decimal" placeholder="自分の適用率" required></label>
+            <label>固定手数料（USD）<input id="fixed" type="number" min="0" max="100000" step="0.01" inputmode="decimal" placeholder="未入力" required></label>
+            <label>梱包費（USD）<input id="packing" type="number" min="0" max="100000" step="0.01" inputmode="decimal" placeholder="未入力" required></label>
+            <label>返品予備費・その他（USD）<input id="other" type="number" min="0" max="100000" step="0.01" inputmode="decimal" placeholder="未入力" required></label>
+          </div>
+          <p class="muted">費用がかからない項目は0を入力。必要な為替・決済・輸入関連費なども「その他」に加えてください。</p>
+          <div class="calc-actions"><button class="primary" type="submit" disabled>差額を計算</button><button type="reset">入力を消す</button></div>
+        </form>
+        <noscript><p>計算にはJavaScriptが必要です。下の計算方法を使って手元でも確認できます。</p></noscript>
+        <div class="calculation-result" aria-live="polite" aria-atomic="true"><span>試算差額（税・作業代は別）</span><output id="profit">未計算</output><p id="breakdown">すべての項目を入力すると計算できます。</p><p id="target-result"></p></div>
+        <details class="formula"><summary>計算方法と限界</summary><p>売上＝予定販売額＋購入者から受け取る送料。そこから（仕入価格＋国内送料）÷為替、売上×手数料率、固定手数料、海外送料、梱包費、その他を差し引きます。</p><p>課税対象額にかかる販売手数料など、ここにない条件は「その他」に加算が必要です。税務上の利益や売却確率を算出するものではありません。目標条件は商品本体の仕入価格・予定販売額で照合し、成約実績の認定とは分けます。</p></details>
+      </aside>
+    </div>
+    <section class="criteria" id="criteria"><div><p class="eyebrow">購入を決める前に</p><h2>価格より先に、同じ商品か。</h2><ul><li>型番・世代・個数が一致しているか</li><li>傷、カビ、くもり、機能の状態が同等か</li><li>ケースやアダプターが付属しているか</li><li>出品価格ではなく、複数の成約を確認したか</li><li>国内・海外送料、手数料、返品負担まで見たか</li></ul></div><figure><img src="./inspection.png" width="1536" height="1024" loading="lazy" alt="光学用品、アダプター、虫眼鏡、梱包箱を描いた検品のイメージ。特定商品の写真ではありません。"><figcaption>検品のイメージ／生成AIによるイラスト</figcaption></figure></section>
+    <section class="policy" id="policy"><h2>掲載情報について</h2><p>本サイトは初期試作です。確認した4型番だけを掲載し、全市場の相場・在庫・販売速度を示すものではありません。確認日から価格や在庫が変わるため、購入前に出典で再確認してください。Best Offerの受諾額、決済完了、返品の有無、同じ条件で仕入れられるかは未確認です。</p><p>現在、広告・アフィリエイトリンク、アクセス解析は設置していません。検索・計算の入力は送信・保存しません。保存ボタンを押した商品IDだけ、このブラウザーに保存します。保存の解除は同じボタンで行えます。保存機能が使えない環境でも閲覧・計算は利用できます。</p><p><a href="https://www.ebay.com/help/selling/selling-tools/research?id=4853" target="_blank" rel="noopener noreferrer">eBay：Product Research</a> · <a href="https://www.ebay.com/sellercenter/selling/start-selling-on-ebay/seller-fees" target="_blank" rel="noopener noreferrer">eBay：販売手数料の説明</a></p></section>
+  </main>
+  <footer>仕入れノート <span>調査と計算の補助。利益・売却を保証するものではありません。</span><a href="#policy">掲載・プライバシー方針</a></footer>
+</body>
+</html>
