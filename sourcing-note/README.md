@@ -18,6 +18,20 @@
 試作のためnoindex,follow。既存サイトのsitemapに追加しない。
 データ更新・自動収集・商用公開範囲は、取得／再利用条件と証拠を確認してから拡張する。
 
+## 読みもの
+
+`guides.html` に4カテゴリ各3本、合計12本を掲載。
+月1万円の計画／仕入れ判断／調査記録／在庫リスク。
+各記事に冒頭の要点、目次、具体例、関連3記事と試算へのリンクがある。
+`monthly-units.html` は必要販売数と入力作業時間の合計を端末内で計算する。
+数値例は仮定であり、実際の収益・料金・売却予測と区別する。
+
+本文の編集元は `scripts/sourcing_articles.py`。
+`python scripts/build-sourcing-guides.py` で静的HTMLを生成。
+`python scripts/build-sourcing-guides.py --check` で更新漏れを検証する。
+`python scripts/check-sourcing-content.py` でリンクとメタデータを検証する。
+現段階では読みものもnoindex。広告や検索流入の設定は変更していない。
+
 ## 検証
 
 `NODE_PATH`にPlaywrightのあるnode_modulesを指定し、`node scripts/check-sourcing.cjs`。

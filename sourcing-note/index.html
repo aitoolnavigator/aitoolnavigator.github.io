@@ -8,12 +8,14 @@
   <meta name="description" content="中古カメラ用品の仕入れ候補を、国内価格と海外の販売記録から確認。出品価格と成約を区別し、送料・手数料を含めて試算できます。">
   <link rel="canonical" href="https://aitoolnavigator.github.io/sourcing-note/">
   <link rel="stylesheet" href="./style.css?v=1">
+  <link rel="stylesheet" href="./reading.css?v=1">
   <script src="./app.js?v=1" defer></script>
 </head>
 <body>
-  <header class="header"><a class="wordmark" href="./">仕入れノート<span>SOURCING NOTE</span></a><nav aria-label="サイト内"><a href="#candidates">商品候補</a><a href="#calculator">経費の試算</a><a href="#criteria">確認基準</a></nav><span class="preview-label">試作版</span></header>
+  <header class="header"><a class="wordmark" href="./">仕入れノート<span>SOURCING NOTE</span></a><nav aria-label="サイト内"><a href="./guides.html">読みもの</a><a href="#candidates">商品候補</a><a href="#calculator">経費の試算</a><a href="#criteria">確認基準</a></nav><span class="preview-label">試作版</span></header>
   <main>
     <section class="intro"><div><p class="eyebrow">日本の中古カメラ用品 → 海外販売</p><h1>仕入れノート</h1><p class="intro-copy">その価格差、経費を引いても残る？</p></div><p class="data-date">調査日 <time datetime="2026-10-18">2026.10.18</time><br>手動調査・リアルタイム更新ではありません</p></section>
+    <nav class="category-strip" aria-label="読みもののカテゴリ"><a href="./guides.html#plan">月1万円の計画</a><a href="./guides.html#buying">仕入れ判断</a><a href="./guides.html#research">調査記録</a><a href="./guides.html#risk">在庫リスク</a></nav>
     <dl class="metrics"><div><dt>調べた型番</dt><dd>4<span>件</span></dd></div><div><dt>条件達成を確認</dt><dd>0<span>件</span></dd></div><div><dt>販売済み表示あり</dt><dd>3<span>件</span></dd></div><div><dt>目標条件</dt><dd class="target">仕入れ ≤ $30<br>販売 ≥ $80</dd></div></dl>
     <p class="notice"><strong>条件を満たす商品は、まだ確認できていません。</strong> 掲載価格や販売済みの表示だけでは、同じ価格で売れることや利益は保証できません。</p>
     <div class="workspace">
@@ -79,6 +81,7 @@
         <details class="formula"><summary>計算方法と限界</summary><p>売上＝予定販売額＋購入者から受け取る送料。そこから（仕入価格＋国内送料）÷為替、売上×手数料率、固定手数料、海外送料、梱包費、その他を差し引きます。</p><p>課税対象額にかかる販売手数料など、ここにない条件は「その他」に加算が必要です。税務上の利益や売却確率を算出するものではありません。目標条件は商品本体の仕入価格・予定販売額で照合し、成約実績の認定とは分けます。</p></details>
       </aside>
     </div>
+    <section class="home-reading"><h2>仕入れる前に、読んでおきたいこと</h2><ul><li><span>月1万円の計画</span><a href="./monthly-units.html">月1万円には、何個売ればいい？</a></li><li><span>仕入れ判断</span><a href="./sourcing-ceiling.html">利益から考える、仕入れ上限の決め方</a></li><li><span>調査記録</span><a href="./thirty-eighty-study.html">30ドルで買って80ドルで売れる？4型番を調べた結果</a></li></ul><a href="./guides.html">4カテゴリ・12本の記事を見る →</a></section>
     <section class="criteria" id="criteria"><div><p class="eyebrow">購入を決める前に</p><h2>価格より先に、同じ商品か。</h2><ul><li>型番・世代・個数が一致しているか</li><li>傷、カビ、くもり、機能の状態が同等か</li><li>ケースやアダプターが付属しているか</li><li>出品価格ではなく、複数の成約を確認したか</li><li>国内・海外送料、手数料、返品負担まで見たか</li></ul></div><figure><img src="./inspection.png" width="1536" height="1024" loading="lazy" alt="光学用品、アダプター、虫眼鏡、梱包箱を描いた検品のイメージ。特定商品の写真ではありません。"><figcaption>検品のイメージ／生成AIによるイラスト</figcaption></figure></section>
     <section class="policy" id="policy"><h2>掲載情報について</h2><p>本サイトは初期試作です。確認した4型番だけを掲載し、全市場の相場・在庫・販売速度を示すものではありません。確認日から価格や在庫が変わるため、購入前に出典で再確認してください。Best Offerの受諾額、決済完了、返品の有無、同じ条件で仕入れられるかは未確認です。</p><p>現在、広告・アフィリエイトリンク、アクセス解析は設置していません。検索・計算の入力は送信・保存しません。保存ボタンを押した商品IDだけ、このブラウザーに保存します。保存の解除は同じボタンで行えます。保存機能が使えない環境でも閲覧・計算は利用できます。</p><p><a href="https://www.ebay.com/help/selling/selling-tools/research?id=4853" target="_blank" rel="noopener noreferrer">eBay：Product Research</a> · <a href="https://www.ebay.com/sellercenter/selling/start-selling-on-ebay/seller-fees" target="_blank" rel="noopener noreferrer">eBay：販売手数料の説明</a></p></section>
   </main>
