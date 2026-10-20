@@ -3,44 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI運用のサーバー代はいくらから考えるべきか | AI Tool Navigator 2026</title>
-<meta name="description" content="AI Bot、API、定期処理、デモサイトの運用費を、VPSとSaaS利用料の両方から逆算します。">
+<title>AI・Botの運用費計算機 | VPS・API・保守時間をまとめて試算</title>
+<meta name="description" content="サーバー代、API、バックアップ、年間ドメイン代と保守時間からAI・Botの運用費を計算。無料・登録不要、入力は送信しません。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://aitoolnavigator.github.io/server-cost-calculator-for-ai.html">
+<link rel="stylesheet" href="./assets/ai-cost-calculator.css?v=1">
+<script src="./assets/ai-cost-calculator.js?v=1" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190099808306732" crossorigin="anonymous"></script>
 <style>
 :root{--ink:#13201a;--muted:#5d6c63;--line:#d9e4dc;--paper:#f6f8f3;--panel:#fff;--accent:#116b5c;--blue:#315c99;font-family:Inter,"Noto Sans JP",system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.8}a{color:inherit}.topbar{position:sticky;top:0;background:rgba(246,248,243,.95);border-bottom:1px solid var(--line);padding:14px clamp(18px,5vw,60px);display:flex;justify-content:space-between;gap:16px}.brand{font-weight:800;text-decoration:none}.wrap{max-width:980px;margin:auto;padding:clamp(28px,6vw,72px) 18px}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase}h1{font-size:clamp(34px,6vw,64px);line-height:1.08;margin:.2em 0}h2{font-size:clamp(24px,4vw,36px);line-height:1.2;margin:2em 0 .4em}.lead,.answer{font-size:18px;color:var(--muted)}.answer,.box,.faq details{border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;padding:10px 16px}.cta.secondary{background:var(--blue)}.toc{display:grid;gap:8px;margin:28px 0}.toc a{color:var(--blue);font-weight:800}.faq{display:grid;gap:12px}.faq summary{font-weight:800;cursor:pointer}.related{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.related a{display:block;border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px;text-decoration:none;font-weight:800}@media(max-width:720px){.topbar{display:block}.related{grid-template-columns:1fr}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI運用のサーバー代はいくらから考えるべきか","description":"AI Bot、API、定期処理、デモサイトの運用費を、VPSとSaaS利用料の両方から逆算します。","inLanguage":"ja","author":{"@type":"Organization","name":"AI Tool Navigator 2026"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI運用のサーバー代はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"軽いBotやAPIなら月1000円前後から検討できます。重い推論や学習は別途GPU費用が必要です。"}},{"@type":"Question","name":"API代とサーバー代は別ですか？","acceptedAnswer":{"@type":"Answer","text":"別です。VPSは置き場所、API代はAIモデル利用料と考えると整理しやすいです。"}},{"@type":"Question","name":"費用記事で成果リンクは自然ですか？","acceptedAnswer":{"@type":"Answer","text":"自然です。読者は具体的な契約候補を探している段階に近いためです。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI・Botの運用費を計算する","description":"サーバー代、API、バックアップ、年間ドメイン代と保守時間から運用費を計算します。","dateModified":"2026-10-21","inLanguage":"ja","author":{"@type":"Organization","name":"AI Tool Navigator 2026"}}</script>
 </head>
 <body>
 <header class="topbar"><a class="brand" href="./">AI Tool Navigator</a><nav><a href="./#articles">記事一覧</a> / <a href="./#policy">方針</a></nav></header>
 <main class="wrap">
 <p class="eyebrow">VPS guide</p>
-<h1>AI運用のサーバー代はいくらから考えるべきか</h1>
-<p class="lead">AI Bot、API、定期処理、デモサイトの運用費を、VPSとSaaS利用料の両方から逆算します。</p>
-<section class="answer"><strong>先に答え:</strong> AI運用のサーバー代は、最初は月1000円前後から検討し、アクセス数と処理時間が増えたらプランを上げるのが現実的です。</section>
-<div class="cta-row"><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" rel="nofollow sponsored">メモリ単価国内最安！コスパ最強のVPS「シンVPS」</a><img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" alt=""></div>
-<nav class="toc"><a href="#s1">費用の分解</a><a href="#s2">最小で始める考え方</a><a href="#s3">集客の切り口</a></nav>
-<section id="s1"><h2>費用の分解</h2><p>サーバー代、API利用料、ドメイン、監視、バックアップを分けます。混ぜて考えると高く見えすぎます。</p></section>
-<section id="s2"><h2>最小で始める考え方</h2><p>まずは小さなVPSで稼働確認し、重い処理だけ外部APIやGPUに逃がします。</p></section>
-<section id="s3"><h2>集客の切り口</h2><p>「AI運用 月額」「Bot サーバー代」「個人開発 固定費」など、財布に近い言葉は成約意図が強めです。</p></section>
+<h1>AI・Botの運用費を計算する</h1>
+<p class="lead">サーバーが安くても、API代と保守時間は別。契約する前に、使い続ける費用を自分の条件で確かめてみましょう。</p>
+<p class="note">広告リンクあり · 更新：2026年10月21日 · 無料・登録不要</p>
+<section class="answer"><strong>先に答え：</strong>必要な予算は用途で変わります。月額の広告価格だけで選ばず、API・保存先・年払いの費用と、更新や障害対応に使う時間を分けて比べましょう。単純な静的ページには、VPS自体が不要な場合もあります。</section>
+<nav class="toc"><a href="#cost-tool">費用を計算</a><a href="#s1">費用の内訳</a><a href="#s2">仮の計算例</a><a href="#s3">契約前の確認</a></nav>
+<section class="cost-tool" id="cost-tool" aria-labelledby="cost-title"><h2 id="cost-title">自分の条件で試算</h2><p>すべて日本円・税込の見込み額で揃えて入力してください。不要な項目は0にします。実際の料金や為替を自動取得する機能はありません。</p>
+<form id="ai-cost-form"><div class="cost-fields">
+<label>サーバー・ホスティング（月額）<input name="server" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>AI API・従量サービス（月額見込み）<input name="api" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>バックアップ・監視など（月額合計）<input name="backup" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>ドメイン（年間更新料）<input name="domain" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>初回だけの費用（合計）<input name="setup" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>月あたりの保守時間（時間）<input name="hours" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>自分の時間を換算する単価（円／時間）<input name="hourly" type="number" min="0" max="10000000" step="0.01" inputmode="decimal" required></label>
+<label>試す期間（月）<input name="months" type="number" min="1" max="120" step="1" inputmode="numeric" required></label>
+</div><div class="cost-buttons"><button type="submit" disabled>運用費を計算</button><button type="button" id="ai-cost-example">仮の例を入力</button><button type="reset">入力を消す</button></div><output id="ai-cost-result" aria-live="polite">未計算</output></form>
+<p>計算はこのブラウザー内で行い、入力内容は送信・保存しません。「仮の例」は実在サービスの料金ではありません。作業時間の換算額は支払額とは分けて表示します。</p>
+<details><summary>計算式と含まれないもの</summary><p>支払見込み＝（月額サーバー＋API＋バックアップ等）×月数＋年間ドメイン代×切り上げ（月数÷12）＋初回費用。ドメインは開始時と毎年の更新時に年払いする仮定です。月平均＝支払見込み÷月数。作業時間の換算額＝月の保守時間×時間単価×月数。</p><p>通信超過、APIの増加、返金、割引終了、追加作業など、入力に含めていない費用は加算されません。会計上の経費や税務上の判断を示すものではありません。</p></details><noscript><p>計算機にはJavaScriptが必要です。下の計算式と例はそのまま読めます。</p></noscript></section>
+<section id="s1"><h2>まず、何に支払うかを分ける</h2><table class="cost-table"><thead><tr><th>項目</th><th>入力するときの確認</th></tr></thead><tbody><tr><td>サーバー</td><td>通常料金と契約期間。長期契約の月換算額と、毎月払いの金額を混同しない。</td></tr><tr><td>AI API</td><td>1処理の入力・出力量と予定回数。再試行や失敗したリクエストの課金条件も確認する。</td></tr><tr><td>保存・監視</td><td>バックアップ先、保存期間、通信量、有料オプションが別料金か。</td></tr><tr><td>初回・年払い</td><td>ドメインの更新料金、初期設定や外注費。初年度だけの割引で見積もらない。</td></tr><tr><td>自分の時間</td><td>OSやライブラリの更新、ログ確認、復元テスト、障害時の対応。無料の労働と見なさず比較する。</td></tr></tbody></table><p>VPS料金を払ってもAI APIの利用料まで含まれるとは限りません。GPUの利用が必要な処理も、この入力例とは別に見積もる必要があります。</p></section>
+<section id="s2"><h2>仮の例：サーバー代だけなら月1,000円でも</h2><p>ここからの金額は、計算方法を確かめるための架空の条件です。実在するプランの見積もりではありません。</p><p>サーバー月1,000円、API月2,000円、バックアップ等月300円、ドメイン年1,200円、初回費用3,000円、期間12か月とします。</p><p><strong>支払見込みは43,800円、月平均は3,650円。</strong>月1,000円のサーバーだけを見た場合より費用が増えます。さらに月2時間の保守を1時間1,500円で換算すると、年間36,000円分の時間を使う仮定になり、合わせて79,800円です。これは売上予測ではありません。</p><p>既存のSaaSを比較するときも、必要な機能と利用上限を揃えます。保守が不要になるわけではありませんが、自分で引き受ける作業がどれくらい減るかが比較材料になります。</p></section>
+<section id="s3"><h2>契約前に決める、三つの上限</h2><ul><li><strong>支出の上限：</strong>毎月使える予算と、年払い・初期費用として今支払える金額を別々に決める。</li><li><strong>使い方の上限：</strong>APIの利用回数や予算通知を設定する。通知と自動停止は別なので、通知だけで請求が止まるとは考えない。</li><li><strong>作業時間の上限：</strong>更新・障害対応をいつ行えるか決める。管理を続けられないなら、既存サービスや管理付きの構成も比較する。</li></ul><p>たとえばGitHub PagesはHTML・CSS・JavaScriptを公開する静的ホスティングです。説明ページだけを出す場合と、秘密のAPIキーを使って処理を常時実行する場合では、必要な基盤が違います。</p><p>費用通知の仕組みもサービスごとに異なります。AWS Budgetsの公式説明では、通知に遅れがあり、その間に追加の費用が発生する可能性が示されています。別サービスの通知にも同じ仕様があると決めつけず、利用先で確認してください。</p></section>
 <section class="box">
 <h2>次にできること</h2>
-<p>ここまで読んで「自分の状況に近い」と感じたら、次は候補を実際に見てみてください。申し込み前に条件を確認し、合わない場合は無理に契約しない前提で比較します。</p>
-<div class="cta-row"><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" rel="nofollow sponsored">メモリ単価国内最安！コスパ最強のVPS「シンVPS」</a><img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" alt=""></div>
+<p>試算が予算に収まり、VPSで動かす処理が決まっている場合だけ、必要なメモリ・契約期間・解約条件を比較しましょう。説明ページを公開するだけなら、VPS契約を見送る選択肢もあります。</p>
+<div class="cta-row"><a class="cta" href="https://px.a8.net/svt/ejp?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" rel="nofollow sponsored">シンVPSの料金・契約条件を確認（広告）</a><img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BEFL2+3XPAM2+5GDG+NTZCI" alt=""></div>
 </section>
 <section>
 <h2>FAQ</h2>
 <div class="faq">
-<details><summary>AI運用のサーバー代はいくらですか？</summary><p>軽いBotやAPIなら月1000円前後から検討できます。重い推論や学習は別途GPU費用が必要です。</p></details>
+<details><summary>AI運用のサーバー代はいくらですか？</summary><p>処理内容と必要な構成で変わります。サーバーに加えてAPI、保存先、初回・更新費、保守時間を分けて見積もってください。このページの仮の例はサービスの料金表ではありません。</p></details>
 <details><summary>API代とサーバー代は別ですか？</summary><p>別です。VPSは置き場所、API代はAIモデル利用料と考えると整理しやすいです。</p></details>
-<details><summary>費用記事で成果リンクは自然ですか？</summary><p>自然です。読者は具体的な契約候補を探している段階に近いためです。</p></details>
+<details><summary>試算の金額で必ず運用できますか？</summary><p>保証できません。入力に含めなかった費用や従量課金の増加は反映されません。実際の見積もり・請求条件を確認してください。</p></details>
 </div>
 </section>
 <section>
-<h2>関連ページ</h2>
+<h2>参照・確認先</h2><ul><li><a href="https://docs.github.com/ja/pages/getting-started-with-github-pages/what-is-github-pages" target="_blank" rel="noopener noreferrer">GitHub Pagesの概要（公式）</a></li><li><a href="https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html" target="_blank" rel="noopener noreferrer">AWS Budgetsの費用管理と通知の注意点（公式・英語）</a></li></ul><p class="note">確認日：2026年10月21日。計算機の初期状態は空欄で、実在するサービスの価格を自動入力しません。</p><h2>関連ページ</h2>
 <div class="related">
 <a href="./ai-vps-comparison.html">AI開発におすすめのVPS比較: 個人開発はどこから始めるべきか</a>
 <a href="./cheap-vps-for-side-project.html">個人開発に使える安いVPSの選び方: 月額より先に見る3条件</a>
@@ -51,6 +65,6 @@
 </div>
 </section>
 </main>
-<footer class="wrap"><p>広告・アフィリエイトリンクを含む場合があります。掲載情報は各公式サイトで確認してください。</p></footer>
+<footer class="wrap"><p>広告・アフィリエイトリンクを含む場合があります。掲載情報は各公式サイトで確認してください。</p><p data-root-policy><a href="./editorial-policy.html">運営・編集方針／プライバシー</a></p></footer>
 </body>
 </html>
